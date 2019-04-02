@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="fun">
+    <item>Чувствую себя хорошо</item>
+    <item>Тут классно!</item>
+    <item>Мне здесь нравится!</item>
+    <item>Крутой концерт!</item>
+</string-array>
+    <string-array name="sad">
+        <item>Чувствую себя нехорошо</item>
+        <item>Сомнительное мероприятие!</item>
+        <item>Мне здесь не нравится!</item>
+        <item>Скучный концерт!</item>
+        <item>Разочарование..</item>
+    </string-array>
+    <string-array name="beer">
+        <item>Выпьем?</item>
+        <item>Хочу выпить</item>
+        <item>Давай по стаканчику</item>
+        <item>Пойдем в бар</item>
+    </string-array>
+    
+    <string-array name="home">
+        <item>Хочу домой</item>
+        <item>Я домой</item>
+        <item>Мне пора</item>
+        <item>Лучше домой пойду</item>
+    </string-array>
+    
+    <string-array name="exit">
+        <item>Выйдем?</item>
+        <item>Хочу на улицу</item>
+        <item>Давай проветримся?</item>
+        <item>Пошли гулять?</item>
+        <item>Ухожу гулять</item>
+    </string-array>
+
+    <string-array name="yes">
+        <item>Да</item>
+        <item>Конечно</item>
+        <item>Точно</item>
+        <item>Абсолютно</item>
+        <item>Верно</item>
+    </string-array>
+
+    <string-array name="no">
+        <item>Нет</item>
+        <item>Не</item>
+        <item>Я не согласен</item>
+    </string-array>
+
+    <string-array name="can">
+        <item>Я смогу</item>
+        <item>Поддерживаю</item>
+        <item>Я в деле</item>
+        <item>Участвую</item>
+        <item>Хочу</item>
+    </string-array>
+
+    <string-array name="cant">
+        <item>Я не смогу</item>
+        <item>Не получится</item>
+        <item>Я не могу</item>
+        <item>К сожалению, не смогу</item>
+    </string-array>
+
+    <string-array name="dish">
+        <item>Пойдем поедим?</item>
+        <item>Хочешь поесть?</item>
+        <item>Может поедим?</item>
+    </string-array>
+
+
+</resources>

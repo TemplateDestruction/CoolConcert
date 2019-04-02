@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/user_bar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="100dp"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintBottom_toTopOf="@+id/artist_photo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:popupTheme="@style/AppTheme.PopupOverlay">
+
+    </android.support.v7.widget.Toolbar>
+
+    <ImageView
+        android:id="@+id/imageViewBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:onClick="concertClick"
+        app:layout_constraintBottom_toTopOf="@+id/user_bar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/user_bar"
+        app:srcCompat="@drawable/ic_navigate_before_black_24dp" />
+
+    <ImageView
+        android:id="@+id/concert_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/user_bar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/user_bar"
+        app:srcCompat="@drawable/ic_priority_high_black_24dp" />
+
+    <ImageView
+        android:id="@+id/artist_photo"
+        android:layout_width="256dp"
+        android:layout_height="256dp"
+        android:layout_marginBottom="319dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/user_bar"
+        app:srcCompat="@drawable/bi" />
+
+    <TextView
+        android:id="@+id/artist_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="8dp"
+        android:text="БИ-2"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/artist_photo"
+        app:layout_constraintStart_toStartOf="@+id/artist_photo"
+        app:layout_constraintTop_toBottomOf="@+id/user_bar"
+        app:layout_constraintVertical_bias="0.431" />
+
+    <TextView
+        android:id="@+id/time_date_concert"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:text="24.03 19-00"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/artist_name"
+        app:layout_constraintTop_toBottomOf="@+id/user_bar" />
+
+    <TextView
+        android:id="@+id/concert_venue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="СК Юбилейный"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/artist_photo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/artist_name"
+        app:layout_constraintTop_toBottomOf="@+id/time_date_concert" />
+
+    <ImageView
+        android:id="@+id/track_img"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="16dp"
+        android:onClick="concertClick"
+        app:layout_constraintStart_toStartOf="@+id/artist_photo"
+        app:layout_constraintTop_toBottomOf="@+id/artist_photo"
+        app:srcCompat="@drawable/ic_audiotrack_black_24dp" />
+
+    <ImageView
+        android:id="@+id/fast_meet_img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:onClick="concertClick"
+        app:layout_constraintEnd_toEndOf="@+id/artist_photo"
+        app:layout_constraintTop_toBottomOf="@+id/artist_photo"
+        app:srcCompat="@drawable/ic_sentiment_satisfied_black_24dp" />
+
+    <ImageView
+        android:id="@+id/questions_concert"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="@+id/track_txt"
+        app:layout_constraintStart_toStartOf="@+id/track_txt"
+        app:layout_constraintTop_toBottomOf="@+id/track_txt"
+        app:srcCompat="@drawable/ic_question_answer_black_48dp" />
+
+    <ImageView
+        android:id="@+id/rating_img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="@+id/textView10"
+        app:layout_constraintStart_toStartOf="@+id/textView10"
+        app:layout_constraintTop_toBottomOf="@+id/textView10"
+        app:srcCompat="@drawable/ic_filter_5_black_24dp" />
+
+    <TextView
+        android:id="@+id/track_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="тексты песен"
+        app:layout_constraintEnd_toEndOf="@+id/track_img"
+        app:layout_constraintStart_toStartOf="@+id/track_img"
+        app:layout_constraintTop_toBottomOf="@+id/track_img" />
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="быстрое знакомство"
+        app:layout_constraintEnd_toEndOf="@+id/fast_meet_img"
+        app:layout_constraintStart_toStartOf="@+id/fast_meet_img"
+        app:layout_constraintTop_toBottomOf="@+id/fast_meet_img" />
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="опросы"
+        app:layout_constraintEnd_toEndOf="@+id/questions_concert"
+        app:layout_constraintStart_toStartOf="@+id/questions_concert"
+        app:layout_constraintTop_toBottomOf="@+id/questions_concert" />
+
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="оценить"
+        app:layout_constraintEnd_toEndOf="@+id/rating_img"
+        app:layout_constraintStart_toStartOf="@+id/rating_img"
+        app:layout_constraintTop_toBottomOf="@+id/rating_img" />
+
+    <Button
+        android:id="@+id/btn_concert_news"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:onClick="concertClick"
+        android:text="новости"
+        app:layout_constraintEnd_toEndOf="@+id/artist_photo"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/artist_photo"
+        app:layout_constraintTop_toBottomOf="@+id/textView11" />
+
+
+</android.support.constraint.ConstraintLayout>

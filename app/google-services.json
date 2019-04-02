@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "199543134236",
+    "firebase_url": "https://coolconcert-793c4.firebaseio.com",
+    "project_id": "coolconcert-793c4",
+    "storage_bucket": "coolconcert-793c4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:199543134236:android:d17c57c585972d25",
+        "android_client_info": {
+          "package_name": "com.breakout.myapplication"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "199543134236-c69rk4l2pp8loqlgaemosrnb5u1otgo9.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.breakout.myapplication",
+            "certificate_hash": "fd1e2a11716d4118d94386e6be44d9b8ad1779a0"
+          }
+        },
+        {
+          "client_id": "199543134236-4km2iin3ulsi8a7r39msv7hcrra9to90.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBez3uJ49AnXizOoUFUHP5Pi90btsaVN-Q"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "199543134236-4km2iin3ulsi8a7r39msv7hcrra9to90.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

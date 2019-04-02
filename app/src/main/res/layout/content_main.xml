@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".main.DefaultActivity"
+    tools:showIn="@layout/app_bar_main">
+
+    <ImageView
+        android:id="@+id/artist_photo5"
+        android:layout_width="242dp"
+        android:layout_height="236dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/concert_venue5"
+        app:srcCompat="@drawable/maruv" />
+
+    <TextView
+        android:id="@+id/concert_venue5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Космонавт"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/time_date_concert5"
+        app:layout_constraintTop_toBottomOf="@+id/time_date_concert5" />
+
+    <TextView
+        android:id="@+id/time_date_concert5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="12.04 19-00"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/artist_name5"
+        app:layout_constraintTop_toBottomOf="@+id/artist_photo3" />
+
+    <TextView
+        android:id="@+id/artist_name5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="12dp"
+        android:text="Марув"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toStartOf="@+id/time_date_concert5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/artist_photo3" />
+
+    <ImageView
+        android:id="@+id/artist_photo3"
+        android:layout_width="256dp"
+        android:layout_height="256dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="319dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/concert_venue3"
+        app:srcCompat="@drawable/skillet" />
+
+    <TextView
+        android:id="@+id/artist_name3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="Cкиллет"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="@+id/artist_photo3"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/time_date_concert3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="30.03 19-00"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/artist_photo3"
+        app:layout_constraintStart_toStartOf="@+id/time_date_concert5"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/concert_venue3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="А2"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/time_date_concert3"
+        app:layout_constraintTop_toBottomOf="@+id/time_date_concert3" />
+</android.support.constraint.ConstraintLayout>
