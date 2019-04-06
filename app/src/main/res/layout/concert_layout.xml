@@ -8,12 +8,11 @@
     <android.support.v7.widget.Toolbar
         android:id="@+id/user_bar"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="100dp"
-        android:background="?attr/colorPrimary"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/profile_red"
         android:minHeight="?attr/actionBarSize"
         android:theme="?attr/actionBarTheme"
-        app:layout_constraintBottom_toTopOf="@+id/artist_photo"
+        android:textAlignment="center"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -50,12 +49,13 @@
         android:id="@+id/artist_photo"
         android:layout_width="256dp"
         android:layout_height="256dp"
+        android:layout_marginTop="8dp"
         android:layout_marginBottom="319dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.503"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/user_bar"
+        app:layout_constraintTop_toBottomOf="@+id/concert_venue"
         app:srcCompat="@drawable/bi" />
 
     <TextView
@@ -67,10 +67,9 @@
         android:layout_marginBottom="8dp"
         android:text="БИ-2"
         android:textSize="24sp"
-        app:layout_constraintBottom_toTopOf="@+id/artist_photo"
+        app:layout_constraintBottom_toBottomOf="@+id/concert_venue"
         app:layout_constraintStart_toStartOf="@+id/artist_photo"
-        app:layout_constraintTop_toBottomOf="@+id/user_bar"
-        app:layout_constraintVertical_bias="0.431" />
+        app:layout_constraintTop_toBottomOf="@+id/user_bar" />
 
     <TextView
         android:id="@+id/time_date_concert"
@@ -89,15 +88,11 @@
         android:id="@+id/concert_venue"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp"
         android:text="СК Юбилейный"
         android:textSize="18sp"
-        app:layout_constraintBottom_toTopOf="@+id/artist_photo"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/artist_name"
+        app:layout_constraintEnd_toEndOf="@+id/time_date_concert"
+        app:layout_constraintStart_toStartOf="@+id/time_date_concert"
         app:layout_constraintTop_toBottomOf="@+id/time_date_concert" />
 
     <ImageView
@@ -125,6 +120,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
+        android:onClick="concertClick"
         app:layout_constraintEnd_toEndOf="@+id/track_txt"
         app:layout_constraintStart_toStartOf="@+id/track_txt"
         app:layout_constraintTop_toBottomOf="@+id/track_txt"

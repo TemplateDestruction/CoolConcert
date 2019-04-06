@@ -3,8 +3,18 @@
     <color name="colorPrimary">#039BE5</color>
     <color name="colorPrimaryDark">#0288D1</color>
     <color name="colorAccent">#FFA000</color>
-
     <color name="grey_100">#F5F5F5</color>
     <color name="grey_300">#E0E0E0</color>
     <color name="grey_500">#9E9E9E</color>
+
+
+    <!--profile-->
+    <color name="profile_red">#C63E31</color>
+    <color name="profile_black">#3F3F3F</color>
+    <color name="profile_beige">#FFA288</color>
+    <color name="profile_white">#FEDDD2</color>
+    <color name="profile_text">#FF7059</color>
+    <!--profile-->
+
+
 </resources>

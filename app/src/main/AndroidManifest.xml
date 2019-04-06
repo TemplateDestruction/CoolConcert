@@ -19,7 +19,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".auth.EmailPasswordActivity"
+            android:name=".main.DefaultActivity"
             android:label=""
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
@@ -31,16 +31,20 @@
         <activity android:name=".concerts.concert.meeting.FastMeetingActivity" />
         <activity
             android:name=".user.UserActivity"
-            android:theme="@style/AppTheme.NoActionBar"
             android:label=""
             />
-        <activity android:name=".main.DefaultActivity"
-            android:theme="@style/AppTheme.NoActionBar"
-            android:label="@string/app_name"/>
+        <activity
+            android:name=".user.DesignedUserActivity"
+            android:label=""
+            />
+        <!--<activity android:name=".main.DefaultActivity"-->
+            <!--android:theme="@style/AppTheme.NoActionBar"-->
+            <!--android:label="@string/app_name"/>-->
         <activity android:name=".user.EditingAct" />
+        <activity android:name=".user.DesignedEditingAct"
+            android:label="@string/my_profile"/>
         <activity android:name=".concerts.ConcertsActivity" />
         <activity android:name=".concerts.concert.ConcertActivity"
-            android:theme="@style/AppTheme.NoActionBar"
             android:label=""/>
         <activity android:name=".concerts.news.ConcertNewsActivity" />
 

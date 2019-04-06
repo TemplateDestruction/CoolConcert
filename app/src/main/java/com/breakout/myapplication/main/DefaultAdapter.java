@@ -42,4 +42,7 @@ public class DefaultAdapter extends BaseAdapter {
         ((ImageView) convertView.findViewById(R.id.nav_img)).setImageResource(elements.get(position).getImage());
         return convertView;
     }
+
+
+
 }
