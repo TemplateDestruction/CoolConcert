@@ -69,6 +69,7 @@
         <item name="android:layout_height">?attr/actionBarSize</item>
         <!-- <item name="theme">@style/ThemeOverlay.AppCompat.Dark.ActionBar</item> -->
         <item name="android:background">@color/profile_red</item>
+        <item name="android:text">@string/profile</item>
     </style>
 
 
