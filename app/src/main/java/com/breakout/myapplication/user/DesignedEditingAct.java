@@ -3,6 +3,7 @@ package com.breakout.myapplication.user;
 import android.Manifest;
 import android.content.ActivityNotFoundException;
 import android.content.Intent;
+import android.content.pm.ActivityInfo;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.net.Uri;
@@ -59,6 +60,8 @@ public class DesignedEditingAct extends AppCompatActivity {
 //        setContentView(R.layout.test_user_edit_layout);
         setContentView(R.layout.design_edit_user);
         ButterKnife.bind(this);
+        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+
         setSupportActionBar(toolbar);
         Intent intent = getIntent();
         strings = Objects.requireNonNull(intent.getExtras()).getStringArray("strings");

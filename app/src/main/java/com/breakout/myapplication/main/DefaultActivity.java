@@ -1,6 +1,7 @@
 package com.breakout.myapplication.main;
 
 import android.content.Intent;
+import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.FloatingActionButton;
@@ -55,6 +56,8 @@ public class DefaultActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_ds);
         ButterKnife.bind(this);
+        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+
         Toolbar toolbar;
         toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);

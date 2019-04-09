@@ -1,6 +1,7 @@
 package com.breakout.myapplication.user;
 
 import android.content.Intent;
+import android.content.pm.ActivityInfo;
 import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -51,7 +52,7 @@ public class DesignedUserActivity extends AppCompatActivity {
         setContentView(R.layout.test_user_layout);
 //        setContentView(R.layout.user_layout);
         ButterKnife.bind(this);
-//        setSupportActionBar(toolbar);
+        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
     }
 
 

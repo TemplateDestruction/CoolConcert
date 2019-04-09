@@ -1,6 +1,7 @@
 package com.breakout.myapplication.concerts.concert;
 
 import android.content.Intent;
+import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
@@ -19,19 +20,21 @@ import butterknife.ButterKnife;
 
 public class ConcertActivity extends AppCompatActivity {
 
-    @BindView(R.id.fast_meet_img)
-    ImageView fastMeeting;
-
-    @BindView(R.id.user_bar)
-    Toolbar userBar;
+//    @BindView(R.id.fast_meet_img)
+//    ImageView fastMeeting;
+//
+//    @BindView(R.id.user_bar)
+//    Toolbar userBar;
 
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+//        setContentView(R.layout.design_concert_layout);
         setContentView(R.layout.concert_layout);
-        ButterKnife.bind(this);
-        setSupportActionBar(userBar);
+//        ButterKnife.bind(this);
+        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+//        setSupportActionBar(userBar);
     }
 
     public void concertClick(View view) {

@@ -1,6 +1,7 @@
 package com.breakout.myapplication.concerts.concert.meeting.qrcodetest;
 
 import android.content.Intent;
+import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -22,9 +23,7 @@ public class TestActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_test);
-
-//        tvCardText = findViewById(R.id.tv_code_text);
-//        btStartScan = findViewById(R.id.btn_scan);
+        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 
         startQRScanner();
 //        btStartScan.setOnClickListener(view -> startQRScanner());
@@ -49,12 +48,6 @@ public class TestActivity extends AppCompatActivity {
                 }
             } else {
                 finish();
-//                super.onActivityResult(requestCode, resultCode, data);
             }
         }
-
-    private void updateText(String scanCode) {
-        tvCardText.setText(scanCode);
-    }
-
 }

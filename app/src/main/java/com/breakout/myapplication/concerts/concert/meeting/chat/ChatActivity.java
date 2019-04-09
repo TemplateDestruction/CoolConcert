@@ -1,6 +1,7 @@
 package com.breakout.myapplication.concerts.concert.meeting.chat;
 
 import android.content.Intent;
+import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.design.widget.FloatingActionButton;
@@ -19,20 +20,12 @@ import com.breakout.myapplication.R;
 import com.firebase.ui.auth.AuthUI;
 import com.firebase.ui.database.FirebaseListAdapter;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.Random;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
-import io.reactivex.Observable;
-import io.reactivex.ObservableSource;
-import io.reactivex.Observer;
-import io.reactivex.android.schedulers.AndroidSchedulers;
-import io.reactivex.disposables.Disposable;
-import io.reactivex.functions.Function;
-import io.reactivex.schedulers.Schedulers;
 
 public class ChatActivity extends AppCompatActivity {
     private static final int SIGN_IN_REQUEST_CODE = 100;
@@ -59,20 +52,20 @@ public class ChatActivity extends AppCompatActivity {
     @BindView(R.id.exit_img)
     ImageView exitImg;
 
-    @BindView(R.id.imageView9)
+    @BindView(R.id.ok_img)
     ImageView yesImg;
 
     @BindView(R.id.no_img)
     ImageView noImg;
 
 
-    @BindView(R.id.imageView10)
+    @BindView(R.id.beer_img)
     ImageView beerImg;
 
     @BindView(R.id.cant_img)
     ImageView cantImg;
 
-    @BindView(R.id.imageView11)
+    @BindView(R.id.can_img)
     ImageView getCantImg;
 
     ListView listOfMessages;
@@ -88,16 +81,17 @@ public class ChatActivity extends AppCompatActivity {
     String[] cant;
     String[] can;
 
-    Disposable disposable;
 
     private FirebaseAuth mAuth;
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.chat_register_layout);
         ButterKnife.bind(this);
+        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         mAuth = FirebaseAuth.getInstance();
-        if(FirebaseAuth.getInstance().getCurrentUser() == null) {
+        if (FirebaseAuth.getInstance().getCurrentUser() == null) {
             // Start sign in/sign up activity
             startActivityForResult(
                     AuthUI.getInstance()
@@ -137,6 +131,8 @@ public class ChatActivity extends AppCompatActivity {
 
             // Clear the input
             input.setText("");
+            adapter.notifyDataSetChanged();
+            listOfMessages.setSelection(adapter.getCount() - 1);
         });
     }
 
@@ -145,7 +141,7 @@ public class ChatActivity extends AppCompatActivity {
     public void onStart() {
         super.onStart();
         // Check if user is signed in (non-null) and update UI accordingly.
-        FirebaseUser currentUser = mAuth.getCurrentUser();
+//        FirebaseUser currentUser = mAuth.getCurrentUser();
 //        updateUI(currentUser);
     }
 
@@ -174,7 +170,8 @@ public class ChatActivity extends AppCompatActivity {
             }
         };
         listOfMessages.setAdapter(adapter);
-        listOfMessages.setSelection(adapter.getCount() - 1);
+        adapter.notifyDataSetChanged();
+//        listOfMessages.setSelection(adapter.getCount() - 1);
 //
 //        disposable =
 //                Observable.just(adapter.getCount())
@@ -208,8 +205,8 @@ public class ChatActivity extends AppCompatActivity {
                                     Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
 
-        if(requestCode == SIGN_IN_REQUEST_CODE) {
-            if(resultCode == RESULT_OK) {
+        if (requestCode == SIGN_IN_REQUEST_CODE) {
+            if (resultCode == RESULT_OK) {
                 Toast.makeText(this,
                         "Successfully signed in. Welcome!",
                         Toast.LENGTH_LONG)
@@ -237,7 +234,7 @@ public class ChatActivity extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        if(item.getItemId() == R.id.menu_sign_out) {
+        if (item.getItemId() == R.id.menu_sign_out) {
             AuthUI.getInstance().signOut(this)
                     .addOnCompleteListener(task -> {
                         Toast.makeText(getApplicationContext(),
@@ -258,44 +255,42 @@ public class ChatActivity extends AppCompatActivity {
             case R.id.fun_img:
                 textInput.setText(fun[random.nextInt(fun.length)]);
                 fab.performClick();
-                listOfMessages.setSelection(adapter.getCount() + 1);
                 break;
             case R.id.sad_img:
                 textInput.setText(sad[random.nextInt(sad.length)]);
                 fab.performClick();
-                listOfMessages.setSelection(adapter.getCount() + 1);                break;
+                break;
             case R.id.dish_img:
                 textInput.setText(dish[random.nextInt(dish.length)]);
                 fab.performClick();
-                listOfMessages.setSelection(adapter.getCount());                break;
+                break;
             case R.id.home_img:
                 textInput.setText(home[random.nextInt(home.length)]);
                 fab.performClick();
-                listOfMessages.setSelection(adapter.getCount());                break;
+                break;
             case R.id.exit_img:
                 textInput.setText(exit[random.nextInt(exit.length)]);
                 fab.performClick();
-                listOfMessages.setSelection(adapter.getCount());                break;
-            case R.id.imageView9:
+                break;
+            case R.id.ok_img:
                 textInput.setText(ok[random.nextInt(ok.length)]);
                 fab.performClick();
-                listOfMessages.setSelection(adapter.getCount());                break;
+                break;
             case R.id.no_img:
                 textInput.setText(no[random.nextInt(no.length)]);
                 fab.performClick();
-                listOfMessages.setSelection(adapter.getCount());                break;
-            case R.id.imageView10:
+                break;
+            case R.id.beer_img:
                 textInput.setText(beer[random.nextInt(beer.length)]);
                 fab.performClick();
-                listOfMessages.setSelection(adapter.getCount());                break;
+                break;
             case R.id.cant_img:
                 textInput.setText(cant[random.nextInt(cant.length)]);
                 fab.performClick();
-                listOfMessages.setSelection(adapter.getCount());                break;
-            case R.id.imageView11:
+                break;
+            case R.id.can_img:
                 textInput.setText(can[random.nextInt(can.length)]);
                 fab.performClick();
-                listOfMessages.setSelection(adapter.getCount());
                 break;
         }
     }
