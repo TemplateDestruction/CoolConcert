@@ -44,7 +44,9 @@ public class DesignedUserActivity extends AppCompatActivity {
     @BindView(R.id.user_genre)
     TextView userGenre;
 
-    int userStatus = 0;
+    int userStatus = 1;
+
+    // TODO: 11.04.2019 shared preferences!
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {

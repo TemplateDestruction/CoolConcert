@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+
     <android.support.v7.widget.Toolbar
         android:id="@+id/user_bar"
         android:layout_width="0dp"
@@ -106,7 +107,7 @@
         app:srcCompat="@drawable/ic_audiotrack_black_24dp" />
 
     <ImageView
-        android:id="@+id/fast_meet_img"
+        android:id="@+id/meet_img"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
@@ -152,9 +153,9 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:text="быстрое знакомство"
-        app:layout_constraintEnd_toEndOf="@+id/fast_meet_img"
-        app:layout_constraintStart_toStartOf="@+id/fast_meet_img"
-        app:layout_constraintTop_toBottomOf="@+id/fast_meet_img" />
+        app:layout_constraintEnd_toEndOf="@+id/meet_img"
+        app:layout_constraintStart_toStartOf="@+id/meet_img"
+        app:layout_constraintTop_toBottomOf="@+id/meet_img" />
 
     <TextView
         android:id="@+id/textView11"
