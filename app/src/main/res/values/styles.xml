@@ -72,11 +72,11 @@
         <item name="android:text">@string/profile</item>
     </style>
 
-    <style name="concert_item">
-        <item name="android:background">
-            @drawable/concert_item
-        </item>
-    </style>
+<!--    <style name="concert_item">-->
+<!--        <item name="android:background">-->
+<!--            @drawable/concert_item-->
+<!--        </item>-->
+<!--    </style>-->
 
 
 </resources>

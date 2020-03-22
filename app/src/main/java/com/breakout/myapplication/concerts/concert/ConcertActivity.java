@@ -35,7 +35,7 @@ public class ConcertActivity extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.design_concert_layout);
+        setContentView(R.layout.concert_layout);
 //        setContentView(R.layout.concert_layout);
 //        ButterKnife.bind(this);
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
@@ -54,13 +54,13 @@ public class ConcertActivity extends AppCompatActivity {
 
     public void concertClick(View view) {
         switch (view.getId()) {
-            case R.id.music_lay:
+            case R.id.track_img:
                 startActivity(new Intent(this, SongActivity.class));
                 break;
-            case R.id.ask_lay:
+            case R.id.questions_concert:
                 startActivity(new Intent(this, ConcertNewsActivity.class));
                 break;
-            case R.id.meet_lay:
+            case R.id.meet_img:
                 startActivity(new Intent(this, FastMeetingActivity.class));
                 break;
             case R.id.imageViewBack:
