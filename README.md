@@ -1,3 +1,4 @@
 # CoolConcert
-Application for concert interaction with viewers, artists and managers.
-Presentation - https://clck.ru/Mc5iF
+Приложение для взаимодействия зрителей, артистов и менеджеров на концертах.
+Презентация - https://clck.ru/Mc5iF
+Приложение - https://clck.ru/Mc8Zf
